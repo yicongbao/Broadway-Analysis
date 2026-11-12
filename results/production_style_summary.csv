@@ -1,0 +1,7 @@
+music_style,n,mean_gross_usd,mean_seats,suppressed
+Traditional,27,767448.2925925927,1196.4074074074072,False
+Pop/Rock,24,822578.2458333332,1261.7083333333333,False
+Mixed/Other,6,1074405.5716666665,1318.1666666666667,False
+Folk/Country,5,782235.004,1043.2,False
+Jazz/Swing,4,675731.7475,1197.5000000000002,False
+HipHop,1,,,True

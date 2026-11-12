@@ -1,0 +1,71 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Market results</title><style>body{font:16px system-ui;color:#193044}table{border-collapse:collapse}td,th{padding:8px;border-bottom:1px solid #ddd}</style><h1>Market model results</h1><p>Individual observations withheld pending source redistribution permission.</p><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>model</th>
+      <th>status</th>
+      <th>n</th>
+      <th>r_squared</th>
+      <th>paper_n</th>
+      <th>paper_r_squared</th>
+      <th>formula</th>
+      <th>rank</th>
+      <th>columns</th>
+      <th>condition_number</th>
+      <th>max_leverage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A</td>
+      <td>Exploratory extension; not exact reproduction</td>
+      <td>501</td>
+      <td>0.506952</td>
+      <td>501</td>
+      <td>0.507</td>
+      <td>log_market_gross ~ holiday_week + C(month) + C(year)</td>
+      <td>24</td>
+      <td>24</td>
+      <td>1.711877e+01</td>
+      <td>0.123078</td>
+    </tr>
+    <tr>
+      <td>B</td>
+      <td>Exploratory extension; not exact reproduction</td>
+      <td>257</td>
+      <td>0.698749</td>
+      <td>257</td>
+      <td>0.699</td>
+      <td>log_market_gross ~ holiday_week + C(month) + C(year) + unemployment_rate_pct + consumer_sentiment_monthly</td>
+      <td>21</td>
+      <td>21</td>
+      <td>2.915288e+03</td>
+      <td>0.196494</td>
+    </tr>
+    <tr>
+      <td>C</td>
+      <td>Exploratory extension; not exact reproduction</td>
+      <td>236</td>
+      <td>0.707511</td>
+      <td>236</td>
+      <td>0.671</td>
+      <td>log_market_gross ~ holiday_week + C(month) + time_years + post_reopening + unemployment_rate_pct + consumer_sentiment_monthly + nyc_visitors_millions_annual</td>
+      <td>18</td>
+      <td>18</td>
+      <td>2.198631e+03</td>
+      <td>0.149060</td>
+    </tr>
+    <tr>
+      <td>D</td>
+      <td>Exploratory extension; not exact reproduction</td>
+      <td>257</td>
+      <td>0.696198</td>
+      <td>257</td>
+      <td>0.696</td>
+      <td>log_market_gross ~ holiday_week + C(month) + C(year) + unemployment_rate_pct + consumer_sentiment_halfyear</td>
+      <td>21</td>
+      <td>21</td>
+      <td>4.392806e+03</td>
+      <td>0.192184</td>
+    </tr>
+  </tbody>
+</table></html>

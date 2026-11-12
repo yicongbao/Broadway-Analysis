@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "production_benchmarks_passed": true,
+  "market_models_full_rank": true,
+  "source_shapes": {
+    "production": [
+      67,
+      19
+    ],
+    "market": [
+      501,
+      21
+    ]
+  },
+  "generated_public_aggregate_tables": 8,
+  "docs_preserved": true
+}
