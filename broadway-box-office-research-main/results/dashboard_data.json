@@ -1,0 +1,969 @@
+{
+  "metrics": {
+    "productions": 67,
+    "market_weeks": 501,
+    "production_r_squared": 0.6079569056109901,
+    "capacity_elasticity": 1.0073848481499077,
+    "capacity_p_hc3": 3.582017220037491e-05,
+    "unemployment_missing": 244
+  },
+  "production_key_coefficients": [
+    {
+      "term": "log_seats",
+      "estimate": 1.0073848481499077,
+      "se_hc3": 0.2437472075168903,
+      "p_hc3": 3.582017220037491e-05,
+      "ci95_lower": 0.529649100084592,
+      "ci95_upper": 1.4851205962152234
+    },
+    {
+      "term": "Adapted",
+      "estimate": 0.2867209168859766,
+      "se_hc3": 0.1736048057529439,
+      "p_hc3": 0.09862173713950727,
+      "ci95_lower": -0.053538249932865434,
+      "ci95_upper": 0.6269800837048187
+    },
+    {
+      "term": "Revival",
+      "estimate": -0.28416945284610506,
+      "se_hc3": 0.15519329250092026,
+      "p_hc3": 0.06709041223750367,
+      "ci95_lower": -0.5883427167900988,
+      "ci95_upper": 0.02000381109788868
+    }
+  ],
+  "robustness": [
+    {
+      "sample": "Full sample",
+      "n": 67,
+      "r_squared": 0.6079569056109901,
+      "adjusted_r_squared": 0.42500346156278557,
+      "capacity": 1.0073848481499077,
+      "ci95_lower": 0.529649100084592,
+      "ci95_upper": 1.4851205962152234,
+      "p_hc3": 3.582017220037491e-05
+    },
+    {
+      "sample": "Without Hamilton",
+      "n": 66,
+      "r_squared": 0.5680970799927181,
+      "adjusted_r_squared": 0.3761402266561483,
+      "capacity": 1.0073848481499041,
+      "ci95_lower": 0.5296491000845844,
+      "ci95_upper": 1.4851205962152239,
+      "p_hc3": 3.5820172200382696e-05
+    },
+    {
+      "sample": "Without top 5%",
+      "n": 63,
+      "r_squared": 0.5311222293329869,
+      "adjusted_r_squared": 0.30784710044393304,
+      "capacity": 0.9238273708071161,
+      "ci95_lower": 0.4541062264269766,
+      "ci95_upper": 1.3935485151872555,
+      "p_hc3": 0.00011583706936779435
+    },
+    {
+      "sample": "At least 20 weeks",
+      "n": 51,
+      "r_squared": 0.6920474004067831,
+      "adjusted_r_squared": 0.4690472420806606,
+      "capacity": 0.796267870076615,
+      "ci95_lower": 0.29603750170096643,
+      "ci95_upper": 1.2964982384522636,
+      "p_hc3": 0.0018092764449979357
+    }
+  ],
+  "market_models": [
+    {
+      "model": "A",
+      "status": "Exploratory extension; not exact reproduction",
+      "n": 501,
+      "r_squared": 0.5069518527774843,
+      "adjusted_r_squared": 0.48317804274369425,
+      "paper_n": 501,
+      "paper_r_squared": 0.507,
+      "identification_note": "Paper-aligned calendar extension; HAC(8).",
+      "rank": 24,
+      "columns": 24,
+      "condition_number": 17.11877131047496,
+      "max_leverage": 0.12307758194341034,
+      "full_rank": true
+    },
+    {
+      "model": "B",
+      "status": "Exploratory extension; not exact reproduction",
+      "n": 257,
+      "r_squared": 0.6987491153204496,
+      "adjusted_r_squared": 0.6732193793306571,
+      "paper_n": 257,
+      "paper_r_squared": 0.699,
+      "identification_note": "Complete-case macro extension; unused year levels removed; HAC(8).",
+      "rank": 21,
+      "columns": 21,
+      "condition_number": 2915.2882203203944,
+      "max_leverage": 0.1964942586865019,
+      "full_rank": true
+    },
+    {
+      "model": "C",
+      "status": "Exploratory extension; not exact reproduction",
+      "n": 236,
+      "r_squared": 0.707510882083089,
+      "adjusted_r_squared": 0.6847020976583758,
+      "paper_n": 236,
+      "paper_r_squared": 0.671,
+      "identification_note": "Rank-repaired tourism extension: a linear time trend replaces year fixed effects because annual tourism is collinear with year dummies; a coarse post-reopening indicator addresses the major structural break; HAC(8).",
+      "rank": 18,
+      "columns": 18,
+      "condition_number": 2198.6312442152816,
+      "max_leverage": 0.14906028237493102,
+      "full_rank": true
+    },
+    {
+      "model": "D",
+      "status": "Exploratory extension; not exact reproduction",
+      "n": 257,
+      "r_squared": 0.6961982822999901,
+      "adjusted_r_squared": 0.6704523740203283,
+      "paper_n": 257,
+      "paper_r_squared": 0.696,
+      "identification_note": "Complete-case semiannual sentiment extension; unused year levels removed; HAC(8).",
+      "rank": 21,
+      "columns": 21,
+      "condition_number": 4392.805656236995,
+      "max_leverage": 0.19218423624147946,
+      "full_rank": true
+    }
+  ],
+  "production_groups": [
+    {
+      "variable": "Adapted",
+      "value": 0,
+      "n": 14,
+      "mean_gross_usd": 614752.9007142858,
+      "median_gross_usd": 495544.78,
+      "se_gross_usd": 101188.24425059119,
+      "ci95_lower_usd": 416423.94198312704,
+      "ci95_upper_usd": 813081.8594454445
+    },
+    {
+      "variable": "Adapted",
+      "value": 1,
+      "n": 53,
+      "mean_gross_usd": 898013.503773585,
+      "median_gross_usd": 831829.14,
+      "se_gross_usd": 61799.60102468325,
+      "ci95_lower_usd": 776886.2857652057,
+      "ci95_upper_usd": 1019140.7217819642
+    },
+    {
+      "variable": "Revival",
+      "value": 0,
+      "n": 46,
+      "mean_gross_usd": 867113.0189130435,
+      "median_gross_usd": 826921.375,
+      "se_gross_usd": 71967.90713749462,
+      "ci95_lower_usd": 726055.9209235541,
+      "ci95_upper_usd": 1008170.116902533
+    },
+    {
+      "variable": "Revival",
+      "value": 1,
+      "n": 21,
+      "mean_gross_usd": 776859.8780952381,
+      "median_gross_usd": 728618.91,
+      "se_gross_usd": 76205.07750886708,
+      "ci95_lower_usd": 627497.9261778586,
+      "ci95_upper_usd": 926221.8300126176
+    }
+  ],
+  "production_styles": [
+    {
+      "music_style": "Traditional",
+      "n": 27,
+      "mean_gross_usd": 767448.2925925927,
+      "mean_seats": 1196.4074074074072,
+      "suppressed": false
+    },
+    {
+      "music_style": "Pop/Rock",
+      "n": 24,
+      "mean_gross_usd": 822578.2458333332,
+      "mean_seats": 1261.7083333333333,
+      "suppressed": false
+    },
+    {
+      "music_style": "Mixed/Other",
+      "n": 6,
+      "mean_gross_usd": 1074405.5716666665,
+      "mean_seats": 1318.1666666666667,
+      "suppressed": false
+    },
+    {
+      "music_style": "Folk/Country",
+      "n": 5,
+      "mean_gross_usd": 782235.004,
+      "mean_seats": 1043.2,
+      "suppressed": false
+    },
+    {
+      "music_style": "Jazz/Swing",
+      "n": 4,
+      "mean_gross_usd": 675731.7475,
+      "mean_seats": 1197.5000000000002,
+      "suppressed": false
+    },
+    {
+      "music_style": "HipHop",
+      "n": 1,
+      "mean_gross_usd": null,
+      "mean_seats": null,
+      "suppressed": true
+    }
+  ],
+  "plot_categories": [
+    {
+      "plot_category": "Romance",
+      "n": 46,
+      "share": 0.6865671641791045
+    },
+    {
+      "plot_category": "Drama",
+      "n": 42,
+      "share": 0.6268656716417911
+    },
+    {
+      "plot_category": "Comedy",
+      "n": 35,
+      "share": 0.5223880597014925
+    },
+    {
+      "plot_category": "Tragedy",
+      "n": 21,
+      "share": 0.31343283582089554
+    },
+    {
+      "plot_category": "Fantasy",
+      "n": 17,
+      "share": 0.2537313432835821
+    },
+    {
+      "plot_category": "Adventure",
+      "n": 14,
+      "share": 0.208955223880597
+    },
+    {
+      "plot_category": "Crime",
+      "n": 6,
+      "share": 0.08955223880597014
+    },
+    {
+      "plot_category": "Biographical",
+      "n": 4,
+      "share": 0.05970149253731343
+    },
+    {
+      "plot_category": "Mystery",
+      "n": 2,
+      "share": 0.029850746268656716
+    }
+  ],
+  "market_annual": [
+    {
+      "year": 2015,
+      "observed_weeks": 31,
+      "total_gross_usd": 822659660,
+      "mean_weekly_gross_usd": 26537408.387096774,
+      "median_weekly_gross_usd": 26921735.0,
+      "mean_weekly_attendance": 250819.29032258064,
+      "mean_gross_per_attendee_usd": 105.55579677419354,
+      "mean_capacity_pct": 0.8441935483870968,
+      "unemployment_observed": 0,
+      "holiday_weeks": 7,
+      "unemployment_missing": 31
+    },
+    {
+      "year": 2016,
+      "observed_weeks": 52,
+      "total_gross_usd": 1366689576,
+      "mean_weekly_gross_usd": 26282491.846153848,
+      "median_weekly_gross_usd": 26254541.0,
+      "mean_weekly_attendance": 254731.42307692306,
+      "mean_gross_per_attendee_usd": 102.89891923076922,
+      "mean_capacity_pct": 0.8265384615384614,
+      "unemployment_observed": 0,
+      "holiday_weeks": 10,
+      "unemployment_missing": 52
+    },
+    {
+      "year": 2017,
+      "observed_weeks": 53,
+      "total_gross_usd": 1637350641,
+      "mean_weekly_gross_usd": 30893408.320754718,
+      "median_weekly_gross_usd": 31147316.0,
+      "mean_weekly_attendance": 259175.45283018867,
+      "mean_gross_per_attendee_usd": 118.89628867924529,
+      "mean_capacity_pct": 0.8803773584905662,
+      "unemployment_observed": 0,
+      "holiday_weeks": 10,
+      "unemployment_missing": 53
+    },
+    {
+      "year": 2018,
+      "observed_weeks": 52,
+      "total_gross_usd": 1823908459,
+      "mean_weekly_gross_usd": 35075162.67307692,
+      "median_weekly_gross_usd": 35928198.5,
+      "mean_weekly_attendance": 276186.3846153846,
+      "mean_gross_per_attendee_usd": 126.53578269230769,
+      "mean_capacity_pct": 0.8959615384615385,
+      "unemployment_observed": 0,
+      "holiday_weeks": 10,
+      "unemployment_missing": 52
+    },
+    {
+      "year": 2019,
+      "observed_weeks": 52,
+      "total_gross_usd": 1757678670,
+      "mean_weekly_gross_usd": 33801512.884615384,
+      "median_weekly_gross_usd": 34046242.5,
+      "mean_weekly_attendance": 281128.1538461539,
+      "mean_gross_per_attendee_usd": 120.01194423076923,
+      "mean_capacity_pct": 0.9053846153846153,
+      "unemployment_observed": 0,
+      "holiday_weeks": 10,
+      "unemployment_missing": 52
+    },
+    {
+      "year": 2020,
+      "observed_weeks": 10,
+      "total_gross_usd": 298444113,
+      "mean_weekly_gross_usd": 29844411.3,
+      "median_weekly_gross_usd": 28403938.0,
+      "mean_weekly_attendance": 253506.8,
+      "mean_gross_per_attendee_usd": 117.15754,
+      "mean_capacity_pct": 0.9339999999999999,
+      "unemployment_observed": 10,
+      "holiday_weeks": 3,
+      "unemployment_missing": 0
+    },
+    {
+      "year": 2021,
+      "observed_weeks": 21,
+      "total_gross_usd": 324498699,
+      "mean_weekly_gross_usd": 15452319.0,
+      "median_weekly_gross_usd": 18664761.0,
+      "mean_weekly_attendance": 122722.14285714286,
+      "mean_gross_per_attendee_usd": 111.42834761904763,
+      "mean_capacity_pct": 0.7880952380952382,
+      "unemployment_observed": 21,
+      "holiday_weeks": 5,
+      "unemployment_missing": 0
+    },
+    {
+      "year": 2022,
+      "observed_weeks": 52,
+      "total_gross_usd": 1435606282,
+      "mean_weekly_gross_usd": 27607813.115384616,
+      "median_weekly_gross_usd": 28805729.0,
+      "mean_weekly_attendance": 217316.09615384616,
+      "mean_gross_per_attendee_usd": 126.48496153846155,
+      "mean_capacity_pct": 0.8453846153846155,
+      "unemployment_observed": 52,
+      "holiday_weeks": 11,
+      "unemployment_missing": 0
+    },
+    {
+      "year": 2023,
+      "observed_weeks": 53,
+      "total_gross_usd": 1604169487,
+      "mean_weekly_gross_usd": 30267348.811320756,
+      "median_weekly_gross_usd": 30153133.0,
+      "mean_weekly_attendance": 237242.15094339623,
+      "mean_gross_per_attendee_usd": 127.15150943396227,
+      "mean_capacity_pct": 0.8958490566037736,
+      "unemployment_observed": 53,
+      "holiday_weeks": 11,
+      "unemployment_missing": 0
+    },
+    {
+      "year": 2024,
+      "observed_weeks": 52,
+      "total_gross_usd": 1691406787,
+      "mean_weekly_gross_usd": 32527053.596153848,
+      "median_weekly_gross_usd": 32435381.5,
+      "mean_weekly_attendance": 258598.61538461538,
+      "mean_gross_per_attendee_usd": 125.19423076923076,
+      "mean_capacity_pct": 0.9105769230769231,
+      "unemployment_observed": 52,
+      "holiday_weeks": 11,
+      "unemployment_missing": 0
+    },
+    {
+      "year": 2025,
+      "observed_weeks": 52,
+      "total_gross_usd": 1947784742,
+      "mean_weekly_gross_usd": 37457398.884615384,
+      "median_weekly_gross_usd": 37824663.0,
+      "mean_weekly_attendance": 280946.0576923077,
+      "mean_gross_per_attendee_usd": 132.54423076923078,
+      "mean_capacity_pct": 0.9113461538461538,
+      "unemployment_observed": 48,
+      "holiday_weeks": 11,
+      "unemployment_missing": 4
+    },
+    {
+      "year": 2026,
+      "observed_weeks": 21,
+      "total_gross_usd": 763298734,
+      "mean_weekly_gross_usd": 36347558.76190476,
+      "median_weekly_gross_usd": 36769360.0,
+      "mean_weekly_attendance": 287905.04761904763,
+      "mean_gross_per_attendee_usd": 126.11412380952379,
+      "mean_capacity_pct": 0.9161904761904763,
+      "unemployment_observed": 21,
+      "holiday_weeks": 3,
+      "unemployment_missing": 0
+    }
+  ],
+  "market_season": [
+    {
+      "season": "2015-16",
+      "observed_weeks": 52,
+      "total_gross_usd": 1372669659,
+      "mean_weekly_gross_usd": 26397493.442307692,
+      "mean_weekly_attendance": 255987.65384615384,
+      "mean_capacity_pct": 0.8342307692307693,
+      "mean_gross_per_attendee_usd": 102.7742653846154
+    },
+    {
+      "season": "2016-17",
+      "observed_weeks": 52,
+      "total_gross_usd": 1449399146,
+      "mean_weekly_gross_usd": 27873060.5,
+      "mean_weekly_attendance": 255216.38461538462,
+      "mean_capacity_pct": 0.8525000000000001,
+      "mean_gross_per_attendee_usd": 108.75326153846153
+    },
+    {
+      "season": "2017-18",
+      "observed_weeks": 53,
+      "total_gross_usd": 1696701656,
+      "mean_weekly_gross_usd": 32013238.79245283,
+      "mean_weekly_attendance": 260084.98113207548,
+      "mean_capacity_pct": 0.8884905660377358,
+      "mean_gross_per_attendee_usd": 122.82911132075473
+    },
+    {
+      "season": "2018-19",
+      "observed_weeks": 52,
+      "total_gross_usd": 1829312138,
+      "mean_weekly_gross_usd": 35179079.57692308,
+      "mean_weekly_attendance": 284004.8846153846,
+      "mean_capacity_pct": 0.8971153846153844,
+      "mean_gross_per_attendee_usd": 123.59938653846156
+    },
+    {
+      "season": "2019-20",
+      "observed_weeks": 41,
+      "total_gross_usd": 1358648520,
+      "mean_weekly_gross_usd": 33137768.780487806,
+      "mean_weekly_attendance": 271653.34146341466,
+      "mean_capacity_pct": 0.9114634146341463,
+      "mean_gross_per_attendee_usd": 121.46320975609757
+    },
+    {
+      "season": "2021-22",
+      "observed_weeks": 42,
+      "total_gross_usd": 846394118,
+      "mean_weekly_gross_usd": 20152240.904761903,
+      "mean_weekly_attendance": 160638.2142857143,
+      "mean_capacity_pct": 0.7990476190476191,
+      "mean_gross_per_attendee_usd": 117.8950761904762
+    },
+    {
+      "season": "2022-23",
+      "observed_weeks": 52,
+      "total_gross_usd": 1577586898,
+      "mean_weekly_gross_usd": 30338209.576923076,
+      "mean_weekly_attendance": 236219.21153846153,
+      "mean_capacity_pct": 0.8867307692307693,
+      "mean_gross_per_attendee_usd": 128.04691153846153
+    },
+    {
+      "season": "2023-24",
+      "observed_weeks": 52,
+      "total_gross_usd": 1539228798,
+      "mean_weekly_gross_usd": 29600553.807692308,
+      "mean_weekly_attendance": 236302.07692307694,
+      "mean_capacity_pct": 0.8963461538461538,
+      "mean_gross_per_attendee_usd": 125.07138653846155
+    },
+    {
+      "season": "2024-25",
+      "observed_weeks": 53,
+      "total_gross_usd": 1892651080,
+      "mean_weekly_gross_usd": 35710397.73584906,
+      "mean_weekly_attendance": 276576.0566037736,
+      "mean_capacity_pct": 0.9132075471698115,
+      "mean_gross_per_attendee_usd": 128.2862641509434
+    },
+    {
+      "season": "2025-26",
+      "observed_weeks": 52,
+      "total_gross_usd": 1910903837,
+      "mean_weekly_gross_usd": 36748150.711538464,
+      "mean_weekly_attendance": 280333.1153846154,
+      "mean_capacity_pct": 0.9094230769230769,
+      "mean_gross_per_attendee_usd": 130.6562153846154
+    }
+  ],
+  "market_quarter": [
+    {
+      "quarter": "2015Q2",
+      "observed_weeks": 5,
+      "mean_weekly_gross_usd": 27968349.2,
+      "mean_weekly_attendance": 263578.2,
+      "mean_gross_per_attendee_usd": 106.14504
+    },
+    {
+      "quarter": "2015Q3",
+      "observed_weeks": 13,
+      "mean_weekly_gross_usd": 24536837.846153848,
+      "mean_weekly_attendance": 231453.76923076922,
+      "mean_gross_per_attendee_usd": 105.7776769230769
+    },
+    {
+      "quarter": "2015Q4",
+      "observed_weeks": 13,
+      "mean_weekly_gross_usd": 27987617.076923076,
+      "mean_weekly_attendance": 265277.53846153844,
+      "mean_gross_per_attendee_usd": 105.10728461538461
+    },
+    {
+      "quarter": "2016Q1",
+      "observed_weeks": 13,
+      "mean_weekly_gross_usd": 25220323.384615384,
+      "mean_weekly_attendance": 252037.15384615384,
+      "mean_gross_per_attendee_usd": 98.88442307692308
+    },
+    {
+      "quarter": "2016Q2",
+      "observed_weeks": 13,
+      "mean_weekly_gross_usd": 27961725.076923076,
+      "mean_weekly_attendance": 280941.92307692306,
+      "mean_gross_per_attendee_usd": 99.5564923076923
+    },
+    {
+      "quarter": "2016Q3",
+      "observed_weeks": 13,
+      "mean_weekly_gross_usd": 23918357.307692308,
+      "mean_weekly_attendance": 230348.15384615384,
+      "mean_gross_per_attendee_usd": 103.74429999999998
+    },
+    {
+      "quarter": "2016Q4",
+      "observed_weeks": 13,
+      "mean_weekly_gross_usd": 28029561.615384616,
+      "mean_weekly_attendance": 255598.46153846153,
+      "mean_gross_per_attendee_usd": 109.41046153846153
+    },
+    {
+      "quarter": "2017Q1",
+      "observed_weeks": 13,
+      "mean_weekly_gross_usd": 27119819.153846152,
+      "mean_weekly_attendance": 236858.23076923078,
+      "mean_gross_per_attendee_usd": 113.3948153846154
+    },
+    {
+      "quarter": "2017Q2",
+      "observed_weeks": 13,
+      "mean_weekly_gross_usd": 34697447.461538464,
+      "mean_weekly_attendance": 304502.46153846156,
+      "mean_gross_per_attendee_usd": 113.92502307692305
+    },
+    {
+      "quarter": "2017Q3",
+      "observed_weeks": 13,
+      "mean_weekly_gross_usd": 28874603.846153848,
+      "mean_weekly_attendance": 249651.53846153847,
+      "mean_gross_per_attendee_usd": 115.53502307692308
+    },
+    {
+      "quarter": "2017Q4",
+      "observed_weeks": 14,
+      "mean_weekly_gross_usd": 32739737.5,
+      "mean_weekly_attendance": 246652.85714285713,
+      "mean_gross_per_attendee_usd": 131.74215
+    },
+    {
+      "quarter": "2018Q1",
+      "observed_weeks": 12,
+      "mean_weekly_gross_usd": 28645528.0,
+      "mean_weekly_attendance": 234769.75,
+      "mean_gross_per_attendee_usd": 121.87365000000001
+    },
+    {
+      "quarter": "2018Q2",
+      "observed_weeks": 13,
+      "mean_weekly_gross_usd": 38814010.615384616,
+      "mean_weekly_attendance": 306344.6153846154,
+      "mean_gross_per_attendee_usd": 126.72764615384615
+    },
+    {
+      "quarter": "2018Q3",
+      "observed_weeks": 14,
+      "mean_weekly_gross_usd": 33916965.64285714,
+      "mean_weekly_attendance": 265461.85714285716,
+      "mean_gross_per_attendee_usd": 127.45406428571434
+    },
+    {
+      "quarter": "2018Q4",
+      "observed_weeks": 13,
+      "mean_weekly_gross_usd": 38518651.23076923,
+      "mean_weekly_attendance": 295808.3846153846,
+      "mean_gross_per_attendee_usd": 129.65850769230767
+    },
+    {
+      "quarter": "2019Q1",
+      "observed_weeks": 13,
+      "mean_weekly_gross_usd": 31313945.230769232,
+      "mean_weekly_attendance": 270211.3076923077,
+      "mean_gross_per_attendee_usd": 115.7387846153846
+    },
+    {
+      "quarter": "2019Q2",
+      "observed_weeks": 13,
+      "mean_weekly_gross_usd": 35909612.538461536,
+      "mean_weekly_attendance": 307730.53846153844,
+      "mean_gross_per_attendee_usd": 116.69428461538463
+    },
+    {
+      "quarter": "2019Q3",
+      "observed_weeks": 13,
+      "mean_weekly_gross_usd": 31014575.846153848,
+      "mean_weekly_attendance": 255481.46153846153,
+      "mean_gross_per_attendee_usd": 121.38972307692308
+    },
+    {
+      "quarter": "2019Q4",
+      "observed_weeks": 13,
+      "mean_weekly_gross_usd": 36967917.92307692,
+      "mean_weekly_attendance": 291089.3076923077,
+      "mean_gross_per_attendee_usd": 126.22498461538461
+    },
+    {
+      "quarter": "2020Q1",
+      "observed_weeks": 10,
+      "mean_weekly_gross_usd": 29844411.3,
+      "mean_weekly_attendance": 253506.8,
+      "mean_gross_per_attendee_usd": 117.15754
+    },
+    {
+      "quarter": "2021Q3",
+      "observed_weeks": 8,
+      "mean_weekly_gross_usd": 3646124.25,
+      "mean_weekly_attendance": 27471.625,
+      "mean_gross_per_attendee_usd": 87.89007500000001
+    },
+    {
+      "quarter": "2021Q4",
+      "observed_weeks": 13,
+      "mean_weekly_gross_usd": 22717669.615384616,
+      "mean_weekly_attendance": 181337.84615384616,
+      "mean_gross_per_attendee_usd": 125.91343846153845
+    },
+    {
+      "quarter": "2022Q1",
+      "observed_weeks": 13,
+      "mean_weekly_gross_usd": 20870149.153846152,
+      "mean_weekly_attendance": 168128.15384615384,
+      "mean_gross_per_attendee_usd": 123.23290769230768
+    },
+    {
+      "quarter": "2022Q2",
+      "observed_weeks": 13,
+      "mean_weekly_gross_usd": 31183693.615384616,
+      "mean_weekly_attendance": 244173.46153846153,
+      "mean_gross_per_attendee_usd": 127.68478461538461
+    },
+    {
+      "quarter": "2022Q3",
+      "observed_weeks": 13,
+      "mean_weekly_gross_usd": 26641581.769230768,
+      "mean_weekly_attendance": 209753.46153846153,
+      "mean_gross_per_attendee_usd": 126.79038461538461
+    },
+    {
+      "quarter": "2022Q4",
+      "observed_weeks": 13,
+      "mean_weekly_gross_usd": 31735827.923076924,
+      "mean_weekly_attendance": 247209.3076923077,
+      "mean_gross_per_attendee_usd": 128.23176923076923
+    },
+    {
+      "quarter": "2023Q1",
+      "observed_weeks": 13,
+      "mean_weekly_gross_usd": 30350730.923076924,
+      "mean_weekly_attendance": 229575.23076923078,
+      "mean_gross_per_attendee_usd": 130.81372307692305
+    },
+    {
+      "quarter": "2023Q2",
+      "observed_weeks": 13,
+      "mean_weekly_gross_usd": 33188807.384615384,
+      "mean_weekly_attendance": 268743.53846153844,
+      "mean_gross_per_attendee_usd": 123.37494615384615
+    },
+    {
+      "quarter": "2023Q3",
+      "observed_weeks": 13,
+      "mean_weekly_gross_usd": 27550671.076923076,
+      "mean_weekly_attendance": 227127.46153846153,
+      "mean_gross_per_attendee_usd": 120.97419230769232
+    },
+    {
+      "quarter": "2023Q4",
+      "observed_weeks": 14,
+      "mean_weekly_gross_usd": 29999768.92857143,
+      "mean_weekly_attendance": 224502.35714285713,
+      "mean_gross_per_attendee_usd": 132.99377142857142
+    },
+    {
+      "quarter": "2024Q1",
+      "observed_weeks": 13,
+      "mean_weekly_gross_usd": 26529507.692307692,
+      "mean_weekly_attendance": 214842.0,
+      "mean_gross_per_attendee_usd": 123.07330769230771
+    },
+    {
+      "quarter": "2024Q2",
+      "observed_weeks": 13,
+      "mean_weekly_gross_usd": 36016526.461538464,
+      "mean_weekly_attendance": 290259.8461538461,
+      "mean_gross_per_attendee_usd": 124.14841538461539
+    },
+    {
+      "quarter": "2024Q3",
+      "observed_weeks": 13,
+      "mean_weekly_gross_usd": 28604392.153846152,
+      "mean_weekly_attendance": 233974.07692307694,
+      "mean_gross_per_attendee_usd": 122.11616153846157
+    },
+    {
+      "quarter": "2024Q4",
+      "observed_weeks": 13,
+      "mean_weekly_gross_usd": 38957788.07692308,
+      "mean_weekly_attendance": 295318.53846153844,
+      "mean_gross_per_attendee_usd": 131.43903846153844
+    },
+    {
+      "quarter": "2025Q1",
+      "observed_weeks": 13,
+      "mean_weekly_gross_usd": 33664500.615384616,
+      "mean_weekly_attendance": 259796.23076923078,
+      "mean_gross_per_attendee_usd": 128.72404615384616
+    },
+    {
+      "quarter": "2025Q2",
+      "observed_weeks": 13,
+      "mean_weekly_gross_usd": 44228325.23076923,
+      "mean_weekly_attendance": 331134.3076923077,
+      "mean_gross_per_attendee_usd": 133.44513076923073
+    },
+    {
+      "quarter": "2025Q3",
+      "observed_weeks": 13,
+      "mean_weekly_gross_usd": 30549522.769230768,
+      "mean_weekly_attendance": 244354.38461538462,
+      "mean_gross_per_attendee_usd": 124.98635384615385
+    },
+    {
+      "quarter": "2025Q4",
+      "observed_weeks": 13,
+      "mean_weekly_gross_usd": 41387246.92307692,
+      "mean_weekly_attendance": 288499.3076923077,
+      "mean_gross_per_attendee_usd": 143.0213923076923
+    },
+    {
+      "quarter": "2026Q1",
+      "observed_weeks": 13,
+      "mean_weekly_gross_usd": 33891986.384615384,
+      "mean_weekly_attendance": 262359.6153846154,
+      "mean_gross_per_attendee_usd": 128.39864615384616
+    },
+    {
+      "quarter": "2026Q2",
+      "observed_weeks": 8,
+      "mean_weekly_gross_usd": 40337863.875,
+      "mean_weekly_attendance": 329416.375,
+      "mean_gross_per_attendee_usd": 122.40177499999999
+    }
+  ],
+  "market_monthly": [
+    {
+      "month": 1,
+      "observed_weeks": 44,
+      "mean_weekly_gross_usd": 30284308.113636363,
+      "mean_weekly_attendance": 242890.31818181818
+    },
+    {
+      "month": 2,
+      "observed_weeks": 40,
+      "mean_weekly_gross_usd": 25847318.175,
+      "mean_weekly_attendance": 220536.225
+    },
+    {
+      "month": 3,
+      "observed_weeks": 42,
+      "mean_weekly_gross_usd": 29816206.61904762,
+      "mean_weekly_attendance": 249123.45238095237
+    },
+    {
+      "month": 4,
+      "observed_weeks": 39,
+      "mean_weekly_gross_usd": 36733794.28205128,
+      "mean_weekly_attendance": 302706.5641025641
+    },
+    {
+      "month": 5,
+      "observed_weeks": 39,
+      "mean_weekly_gross_usd": 34850399.615384616,
+      "mean_weekly_attendance": 294018.3846153846
+    },
+    {
+      "month": 6,
+      "observed_weeks": 39,
+      "mean_weekly_gross_usd": 34275974.974358976,
+      "mean_weekly_attendance": 282583.28205128206
+    },
+    {
+      "month": 7,
+      "observed_weeks": 41,
+      "mean_weekly_gross_usd": 31001863.658536587,
+      "mean_weekly_attendance": 256602.70731707316
+    },
+    {
+      "month": 8,
+      "observed_weeks": 42,
+      "mean_weekly_gross_usd": 25762303.404761903,
+      "mean_weekly_attendance": 213713.92857142858
+    },
+    {
+      "month": 9,
+      "observed_weeks": 43,
+      "mean_weekly_gross_usd": 24020707.30232558,
+      "mean_weekly_attendance": 207149.27906976745
+    },
+    {
+      "month": 10,
+      "observed_weeks": 45,
+      "mean_weekly_gross_usd": 28506379.911111113,
+      "mean_weekly_attendance": 235606.24444444446
+    },
+    {
+      "month": 11,
+      "observed_weeks": 42,
+      "mean_weekly_gross_usd": 32516251.73809524,
+      "mean_weekly_attendance": 265949.45238095237
+    },
+    {
+      "month": 12,
+      "observed_weeks": 45,
+      "mean_weekly_gross_usd": 37595845.91111111,
+      "mean_weekly_attendance": 275240.4
+    }
+  ],
+  "market_holiday": [
+    {
+      "holiday_group": "Holiday",
+      "observed_weeks": 102,
+      "mean_weekly_gross_usd": 32374651.54901961,
+      "median_weekly_gross_usd": 30261780.5,
+      "mean_weekly_attendance": 253981.79411764705
+    },
+    {
+      "holiday_group": "Other",
+      "observed_weeks": 399,
+      "mean_weekly_gross_usd": 30504464.64160401,
+      "median_weekly_gross_usd": 30443388.0,
+      "mean_weekly_attendance": 252934.27819548873
+    }
+  ],
+  "unemployment_missingness": [
+    {
+      "year": 2015,
+      "sum": 31,
+      "count": 31,
+      "rate": 1.0
+    },
+    {
+      "year": 2016,
+      "sum": 52,
+      "count": 52,
+      "rate": 1.0
+    },
+    {
+      "year": 2017,
+      "sum": 53,
+      "count": 53,
+      "rate": 1.0
+    },
+    {
+      "year": 2018,
+      "sum": 52,
+      "count": 52,
+      "rate": 1.0
+    },
+    {
+      "year": 2019,
+      "sum": 52,
+      "count": 52,
+      "rate": 1.0
+    },
+    {
+      "year": 2020,
+      "sum": 0,
+      "count": 10,
+      "rate": 0.0
+    },
+    {
+      "year": 2021,
+      "sum": 0,
+      "count": 21,
+      "rate": 0.0
+    },
+    {
+      "year": 2022,
+      "sum": 0,
+      "count": 52,
+      "rate": 0.0
+    },
+    {
+      "year": 2023,
+      "sum": 0,
+      "count": 53,
+      "rate": 0.0
+    },
+    {
+      "year": 2024,
+      "sum": 0,
+      "count": 52,
+      "rate": 0.0
+    },
+    {
+      "year": 2025,
+      "sum": 4,
+      "count": 52,
+      "rate": 0.07692307692307693
+    },
+    {
+      "year": 2026,
+      "sum": 0,
+      "count": 21,
+      "rate": 0.0
+    }
+  ]
+}

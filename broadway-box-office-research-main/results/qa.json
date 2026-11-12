@@ -1,0 +1,35 @@
+{
+  "production_shape": [
+    67,
+    19
+  ],
+  "market_shape": [
+    501,
+    21
+  ],
+  "production_duplicates": 0,
+  "market_duplicate_dates": 0,
+  "log_gross_max_error": 0.0,
+  "seat_range": {
+    "min": 582.9999999999999,
+    "max": 1873.9999999999998
+  },
+  "nonpositive_gross": 0,
+  "date_min": "2015-05-31",
+  "date_max": "2026-05-24",
+  "style_counts": {
+    "Traditional": 27,
+    "Pop/Rock": 24,
+    "Mixed/Other": 6,
+    "Folk/Country": 5,
+    "Jazz/Swing": 4,
+    "HipHop": 1
+  },
+  "production_diagnostics": {
+    "rank": 22,
+    "columns": 22,
+    "condition_number": 229.66486846559204,
+    "max_leverage": 0.9999999999999996
+  },
+  "unemployment_missing": 244
+}

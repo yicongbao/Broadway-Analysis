@@ -1,0 +1,7 @@
+private_inputs/
+.env
+__pycache__/
+*.egg-info/
+.pytest_cache/
+
+results/influence.csv

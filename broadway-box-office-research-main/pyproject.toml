@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "broadway-research"
+version = "1.0.0"
+requires-python = ">=3.11"
+dependencies = [
+  "pandas>=2.2,<4",
+  "numpy>=2,<3",
+  "statsmodels>=0.14,<0.16",
+  "openpyxl>=3.1,<4",
+  "matplotlib>=3.8,<4",
+  "plotly>=5.20,<8",
+  "tabulate>=0.9,<1",
+]
+
+[project.optional-dependencies]
+research = [
+  "nbformat>=5.10,<6",
+  "nbclient>=0.10,<0.12",
+  "ipykernel>=6.29,<8",
+]
+test = ["pytest>=8,<10"]
+[tool.setuptools.packages.find]
+where = ["src"]
+[tool.pytest.ini_options]
+pythonpath = ["src"]

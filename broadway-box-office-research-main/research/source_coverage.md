@@ -1,0 +1,3 @@
+# Source Coverage
+
+The supplied paper establishes reported benchmarks and methods. The six-sheet workbook supplies two analysis tables, production coefficients, selected market coefficients, model comparisons and provenance notes. Production coefficients are directly reproducible. Original upstream workbooks, acquisition snapshots, full market matrices and microdata are absent. Reference CSV files are secondary exports, not independent evidence.

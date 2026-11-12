@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A reproducible two-level empirical analysis of Broadway production and market box office associations.">
+  <title>Broadway Box Office Research</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script defer src="assets/plotly.min.js"></script>
+  <script defer src="assets/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to research</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Broadway Box Office Research home"><span class="brand-mark" aria-hidden="true">B</span><span>Broadway Box Office <small>Empirical research</small></span></a>
+    <nav aria-label="Primary navigation"><a href="#findings">Findings</a><a href="#production">Production</a><a href="#market">Market</a><a href="#methods">Methods</a><a class="nav-cta" href="https://github.com/shacocn/broadway-box-office-research">Repository</a></nav>
+  </header>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow">Reproducible computational study · 2015–2026</p>
+        <h1>The economics behind a Broadway curtain call</h1>
+        <p class="lede">Two linked questions, two distinct units of analysis: which production characteristics are associated with a musical’s average weekly gross, and how do Broadway-wide receipts vary with economic and seasonal conditions?</p>
+        <div class="hero-actions"><a class="button primary" href="#production">Explore the estimates</a><a class="button secondary" href="https://github.com/shacocn/broadway-box-office-research/blob/main/research/report.md">Read the research report</a></div>
+      </div>
+      <aside class="hero-panel" aria-label="Study at a glance">
+        <div class="metric"><strong>67</strong><span>musical productions</span></div><div class="metric"><strong>501</strong><span>observed market weeks</span></div><div class="metric"><strong>0.608</strong><span>production model R²</span></div><div class="metric"><strong>HC3 / HAC</strong><span>robust inference</span></div><p>Production and market observations remain separate throughout the analysis.</p>
+      </aside><div class="hero-rule" aria-hidden="true"></div>
+    </section>
+    <section class="section compact" id="findings">
+      <div class="section-heading"><p class="eyebrow">Evidence at a glance</p><h2>What the estimates support</h2><p>The strongest replicated result concerns commercial scale. Creative classifications are more uncertain, and the market models remain exploratory.</p></div>
+      <div class="finding-grid">
+        <article class="finding featured"><span class="finding-number">01</span><h3>Capacity is the clearest production correlate</h3><p>The log–log coefficient is <strong>1.007</strong> with a 95% HC3 interval of <strong>0.530–1.485</strong> and p&nbsp;&lt;&nbsp;0.001. A 1% capacity difference is associated with about a 1.01% gross difference, conditional on included controls.</p></article>
+        <article class="finding"><span class="finding-number">02</span><h3>Adaptation and revival evidence is weaker</h3><p>Adaptation is positive (0.287) and revival negative (−0.284), but neither clears the 5% threshold. These are associations, not causal effects.</p></article>
+        <article class="finding"><span class="finding-number">03</span><h3>Market inference has a narrower evidence base</h3><p>Unemployment is absent for 244 of 501 weeks. The missing pattern is concentrated in earlier years, so complete-case estimates cannot represent the full market series.</p></article>
+      </div>
+    </section>
+    <section class="section band" id="production">
+      <div class="section-heading split"><div><p class="eyebrow">Production level · N = 67</p><h2>Scale, identity, and average weekly gross</h2></div><p>The primary specification regresses log average weekly gross on log theatre capacity, adaptation and revival indicators, year, music style, and plot indicators. Intervals use HC3 covariance.</p></div>
+      <div class="chart-grid">
+        <article class="chart-card span-7"><div class="chart-header"><div><span class="kicker">Primary model</span><h3>Coefficient estimates</h3></div><span class="badge">95% HC3 CI</span></div><div id="coefficient-chart" class="chart" role="img" aria-label="Production model coefficient estimates and 95 percent HC3 confidence intervals"></div><p class="chart-note">Reference categories and all terms are documented in the methodology. Wide intervals reflect the small sample and dense specification.</p></article>
+        <article class="chart-card span-5 benchmark-card"><div class="chart-header"><div><span class="kicker">Verification</span><h3>Paper versus Python</h3></div><span class="status"><i></i>Matched</span></div><div class="benchmark-list"><div><span>R²</span><strong>0.607957</strong><small>|Δ| &lt; 10⁻¹⁵</small></div><div><span>Capacity coefficient</span><strong>1.007385</strong><small>|Δ| &lt; 10⁻¹⁴</small></div><div><span>Capacity p-value</span><strong>0.000036</strong><small>|Δ| &lt; 10⁻¹⁷</small></div><div><span>Adapted coefficient</span><strong>0.286721</strong><small>|Δ| &lt; 10⁻¹⁰</small></div></div><a class="text-link" href="https://github.com/shacocn/broadway-box-office-research/blob/main/results/paper_vs_python.csv">Inspect the comparison data <span aria-hidden="true">→</span></a></article>
+        <article class="chart-card span-12"><div class="chart-header"><div><span class="kicker">Sensitivity analysis</span><h3>Capacity association across sample definitions</h3></div><span class="badge">Same formula</span></div><div id="robustness-chart" class="chart short" role="img" aria-label="Capacity coefficient with confidence intervals across four sensitivity samples"></div><div class="insight"><strong>Interpretation:</strong> the positive association persists when high-grossing productions are removed and when the sample is restricted to longer-running shows. R² values across different samples are not a model-selection ranking. Excluding <em>Hamilton</em> also removes the only HipHop observation.</div></article>
+      </div>
+    </section>
+    <section class="section" id="market">
+      <div class="section-heading split"><div><p class="eyebrow">Market level · 501 observed weeks</p><h2>A market interrupted, then rebuilt</h2></div><p>Annual and monthly summaries protect restricted row-level observations while showing the time structure that shapes the exploratory market analysis.</p></div>
+      <div class="chart-grid">
+        <article class="chart-card span-8"><div class="chart-header"><div><span class="kicker">Observed periods</span><h3>Annual market profile</h3></div><div class="segmented" aria-label="Select annual market measure"><button class="active" data-market-view="gross" aria-pressed="true">Gross</button><button data-market-view="attendance" aria-pressed="false">Attendance</button></div></div><div id="market-chart" class="chart" role="img" aria-label="Annual average Broadway market gross"></div><p class="chart-note">2020, 2021, and 2026 are partial observed years. The shutdown-only gap is not interpolated. Values are nominal and not inflation adjusted.</p></article>
+        <article class="chart-card span-4"><div class="chart-header"><div><span class="kicker">Calendar pattern</span><h3>Mean gross by month</h3></div></div><div id="seasonality-chart" class="chart" role="img" aria-label="Mean weekly market gross by month"></div><p class="chart-note">Descriptive averages pool all observed years and do not isolate causal holiday effects.</p></article>
+        <article class="chart-card span-7"><div class="chart-header"><div><span class="kicker">Data quality</span><h3>Unemployment coverage by year</h3></div><span class="badge warning">48.7% missing overall</span></div><div id="missingness-chart" class="chart short" role="img" aria-label="Weeks missing unemployment by year"></div></article>
+        <article class="chart-card span-5"><div class="chart-header"><div><span class="kicker">Exploratory extension</span><h3>Market model fit</h3></div></div><div id="market-model-chart" class="chart short" role="img" aria-label="Paper-reported and exploratory market model R squared values"></div><p class="chart-note">A, B, and D reproduce reported fit closely under transparent formulas. C does not, and the original design matrices are unavailable. These extensions are not claimed as exact replication.</p></article>
+      </div>
+    </section>
+    <section class="section band" id="methods">
+      <div class="section-heading"><p class="eyebrow">Methods and evidence boundary</p><h2>Designed to be auditable</h2><p>The repository separates exact aggregate-level reproduction from new exploratory analysis and from claims the supplied data cannot support.</p></div>
+      <div class="method-grid"><article><span>01</span><h3>Two units of analysis</h3><p>Production aggregates answer a cross-sectional question; weekly market totals answer a time-series question. Their coefficients are never compared as if they share an observation unit.</p></article><article><span>02</span><h3>Robust uncertainty</h3><p>HC3 protects the small production sample against leverage-sensitive heteroskedasticity. HAC with eight lags addresses short-run serial correlation in the exploratory weekly models.</p></article><article><span>03</span><h3>Deterministic checks</h3><p>Shape, missingness, transformations, benchmarks, sample definitions, figures, and site artifacts are validated by automated tests.</p></article><article><span>04</span><h3>Restricted source boundary</h3><p>The original workbook and row-level observations remain private pending redistribution permission. Public artifacts contain estimates and derived summaries only.</p></article></div>
+      <div class="limits"><div><span class="kicker">Known limitations</span><h3>What this study cannot identify</h3></div><ul><li>No causal effect of adding seats: high-demand productions may be assigned larger theatres.</li><li>No reconstruction of the unavailable 4,972 show-week microdata or full selection trail.</li><li>No verified controls for budget, star casting, marketing, reviews, or ticket pricing.</li><li>Market matching is incomplete, repeated-frequency variables are coarse, and the pandemic is a structural break.</li></ul></div>
+    </section>
+    <section class="section reproducibility" id="reproduce">
+      <div><p class="eyebrow">Open methods, bounded data</p><h2>Reproduce the analysis with authorized inputs</h2><p>The full Python pipeline, notebooks, tests, formulas, and generated outputs are public. The supplied analysis workbook must be obtained separately with permission.</p></div>
+      <div class="code-block" role="region" aria-label="Reproduction commands"><div><span></span><span></span><span></span><small>terminal</small></div><code>python -m pip install -e ".[research,test]"<br>python -m broadway_research.pipeline <br>&nbsp;&nbsp;--input-dir "$BROADWAY_INPUT_DIR" <br>&nbsp;&nbsp;--output-dir .<br>python -m pytest -q</code></div>
+      <div class="resource-links"><a href="https://github.com/shacocn/broadway-box-office-research/tree/main/notebooks"><strong>Executed notebooks</strong><span>Trace each analytical stage →</span></a><a href="https://github.com/shacocn/broadway-box-office-research/blob/main/research/methodology.md"><strong>Methodology</strong><span>Formulas, diagnostics, rationale →</span></a><a href="https://github.com/shacocn/broadway-box-office-research/blob/main/research/limitations.md"><strong>Limitations</strong><span>Evidence and provenance boundary →</span></a></div>
+    </section>
+  </main>
+  <footer><div><strong>Broadway Box Office Research</strong><p>Associational evidence, reproduced with explicit uncertainty.</p></div><div><a href="https://github.com/shacocn/broadway-box-office-research">GitHub</a><a href="https://github.com/shacocn/broadway-box-office-research/blob/main/research/report.md">Research report</a><a href="#top">Back to top ↑</a></div></footer>
+</body>
+</html>
